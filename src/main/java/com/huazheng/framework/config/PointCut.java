@@ -14,4 +14,8 @@ public class PointCut {
     public void after(){
         System.out.println("---------------方法执行后---------");
     }
+
+    public void log(){
+        System.out.println("自定义的日志类");
+    }
 }

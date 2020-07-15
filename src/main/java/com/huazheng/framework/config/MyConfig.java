@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @Created by zhanghuazheng
  */
 
-@Configuration
+//@Configuration
 public class MyConfig {
     @Bean
     public User user(){

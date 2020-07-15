@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @Date 2020/7/15 16:32
  * @Created by zhanghuazheng
  */
-
+@Component
 public class CaluateImpl implements Caluate{
 
     public int add(int a, int b) {

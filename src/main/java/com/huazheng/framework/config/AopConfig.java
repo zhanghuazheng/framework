@@ -18,17 +18,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class AopConfig {
 
-    @Before("execution( * com.huazheng.framework.config.AopConfig.*(..))")
+    @Before("execution( * com.huazheng.framework.domain.*.*(..))")
     public void before(){
         System.out.println("方法执行前");
     }
 
-    @After("execution( * com.huazheng.framework.config.AopConfig.*(..))")
+    @After("execution( * com.huazheng.framework.domain.*.*(..))")
     public void after(){
         System.out.println("方法执行后");
     }
 
-    @Around("execution( * com.huazheng.framework.config.AopConfig.*(..))")
+    @Around("execution( * com.huazheng.framework.domain.*.*(..))")
     public void around(ProceedingJoinPoint jp) throws Throwable {
         System.out.println("方法执行后");
         Object proceed = jp.proceed();
