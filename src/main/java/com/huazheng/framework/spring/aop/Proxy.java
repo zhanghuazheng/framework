@@ -24,6 +24,6 @@ public class Proxy implements Rent {
     }
 
     private void seeHouse() {
-        System.out.println("中间带看房屋");
+        System.out.println("中介带看房屋");
     }
 }
