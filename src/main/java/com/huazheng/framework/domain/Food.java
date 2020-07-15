@@ -10,9 +10,9 @@ public class Food {
     private String name;
     private String color;
 
-    public Food(){
-
-    }
+//    public Food(){
+//
+//    }
     public Food(String name, String color) {
         this.name = name;
         this.color = color;
