@@ -13,7 +13,7 @@
 <!--    <bean id="caluateImpl" class="com.huazheng.framework.domain.CaluateImpl"/>-->
 
     <context:component-scan base-package="com.huazheng.framework"/>
-<!--    <context:annotation-config/>-->
+    <context:annotation-config/>
     <aop:aspectj-autoproxy/>
 
 
