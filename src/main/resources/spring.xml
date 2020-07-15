@@ -2,12 +2,21 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--bean就是java对象 , 由Spring创建和管理-->
-    <bean id="food" class="com.huazheng.framework.domain.Food" scope="prototype">
+    <bean id="food" class="com.huazheng.framework.domain.Food" scope="singleton">
         <constructor-arg index="0" value="apple"/>
         <constructor-arg index="1" value="green"/>
-
     </bean>
 
+    <!--    spring的作用域通过修改其属性scope，目前有四种属性值，分别是singleton,prototype,request,session-->
+
+    <!--    测试自动装配按照名字byName-->
+    <bean id="user" class="com.huazheng.framework.domain.User" autowire="byName">
+        <property name="name" value="huazheng"/>
+    </bean>
+
+    <bean id="cat" class="com.huazheng.framework.domain.Cat"/>
+
+    <bean id="dog" class="com.huazheng.framework.domain.Dog"/>
 
 
 </beans>
