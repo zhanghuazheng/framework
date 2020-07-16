@@ -1,7 +1,6 @@
 package com.huazheng.framework.office.excel;
 
 import com.alibaba.excel.EasyExcel;
-import com.alibaba.excel.support.ExcelTypeEnum;
 import com.huazheng.framework.domain.DemoData;
 
 import java.util.ArrayList;
@@ -15,11 +14,13 @@ import java.util.List;
  * @Created by zhanghuazheng
  */
 public class EasyWriteFile {
-    private static String  PATH="E:\\study\\studyCode\\workSpaces\\framework\\";
+    private static String PATH = "E:\\study\\studyCode\\workSpaces\\framework\\";
 
-    public  void writeFile(){
-        String fileName = PATH + "easyExcelWrite03.xlsx";
+    public void writeFile() {
+        String fileName = PATH + System.currentTimeMillis() + "easyExcelWrite.xlsx";
 
+//        EasyExcel.write(fileName, DemoData.class).excelType(ExcelTypeEnum.XLS).sheet("测试").doWrite(data());
+//        EasyExcel.write(fileName, DemoData.class).excelType(ExcelTypeEnum.XLS).sheet("测试").doWrite(data());
         EasyExcel.write(fileName, DemoData.class).sheet("测试").doWrite(data());
     }
 
